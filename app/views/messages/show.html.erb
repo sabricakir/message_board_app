@@ -1,0 +1,7 @@
+<h2><%= @message.title%></h2>
+<p><%= @message.description%><p>
+
+<%= link_to "Back", root_path, class: "btn btn-secondary"%>
+<%= link_to "Edit", edit_message_path(@message), class: "btn btn-success"%>
+<%= button_to "Delete", message_path(@message), method: :delete, form: { data: { turbo_confirm: "Are you sure?" } }, 
+class: "btn btn-danger"%>
