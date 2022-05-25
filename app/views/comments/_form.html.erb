@@ -1,0 +1,6 @@
+<%= simple_form_for([@message,@message.comments.build]) do |f|%>
+    <div class="mt-3 d-flex flex-column" style="width:25rem;">
+        <%= f.input :content, label: false, placeholder: "please write your comment here...", class: "mt-2", :input_html => {:rows => 2}%>
+        <%= f.button :submit, class: "btn btn-primary mt-2"%>
+    </div>
+<%end%>

@@ -1,5 +1,8 @@
 <%= simple_form_for @message do |f| %>
-  <%= f.input :title, label: "Message Title" %>
-  <%= f.input :description, label: "Message Description" %>
-  <%= f.button :submit,  class: "btn btn-primary"%>
+  <div class="container-lg mt-3 d-flex flex-column">
+    <%= f.input :title, label: false, placeholder: "please write your title here...", class: "mt-2", :input_html => {:rows => 3}%>
+    <%= f.input :description, label: false, placeholder: "please write your description here...", class: "mt-2", :input_html => {:rows => 5}%>
+    <%= f.button :submit,  class: "btn btn-primary mt-2"%>
+    <%= link_to "Back To Messages", root_path, class: "btn btn-secondary mt-2"%>
+  </div>
 <% end %>

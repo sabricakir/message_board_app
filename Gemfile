@@ -5,6 +5,7 @@ ruby "3.0.3"
 gem 'devise', '~> 4.8', '>= 4.8.1'
 gem "rails", "~> 7.0.2", ">= 7.0.2.3"
 gem "sprockets-rails"
+gem 'sass-rails'
 gem "sqlite3", "~> 1.4"
 gem 'simple_form', '~> 5.1'
 gem "puma", "~> 5.0"

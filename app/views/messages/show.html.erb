@@ -1,7 +1,27 @@
-<h2><%= @message.title%></h2>
-<p><%= @message.description%><p>
+<div class="container-lg mt-5 p-5" style="background-color:#a9aeb2; border-radius:10px;">
+    <h2 class="fs-1 fw-bold"><%= @message.title%></h2>
+    <p class="pt-2 ms-3"><%= @message.description%><p>
+    <p class="text-end" style="color:#0B5ED7;">Posted By <%= @message.user.email %> <%= time_ago_in_words(@message.created_at) %> ago.<p>
+    
+    <div class="border border-1 border-secondary p-3 mt-5" style="border-radius:15px;">
+        
+        <h3 class="mt-5 fs-2 fw-bold"> Comments :  </h3>
+        <%= render @message.comments%>
 
-<%= link_to "Back", root_path, class: "btn btn-secondary"%>
-<%= link_to "Edit", edit_message_path(@message), class: "btn btn-success"%>
-<%= button_to "Delete", message_path(@message), method: :delete, form: { data: { turbo_confirm: "Are you sure?" } }, 
-class: "btn btn-danger"%>
+
+        <h3 class="mt-5 fs-2 fw-bold"> Reply That Message : </h3>
+        <%= render 'comments/form'%>
+
+    </div>
+
+    <div class = "d-flex justify-content-between mt-5">
+    <%= link_to "Back to Messages", root_path, class: "btn btn-primary"%>
+    <%if user_signed_in?%>
+        <%if @message.user.id == current_user.id%>
+        <%= link_to "Edit This Message ", edit_message_path(@message), class: "btn btn-success"%>
+        <%= button_to "Delete This Message", message_path(@message), method: :delete, form: { data: { turbo_confirm: "Are you sure?" } }, 
+        class: "btn btn-danger"%>
+        <%end%>
+    <%end%>
+    </div>
+</div>

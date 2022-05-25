@@ -1,6 +1,9 @@
-<% @messages.each do |message|%>
-<h2><%= message.title%></h2>
-<%= link_to "View Message", message_path(message), class: "btn btn-secondary"%>
-<hr/>
-<%end%>
-<%= link_to "New Message", new_message_path, class: "btn btn-success"%>
+<div class="row ms-auto me-auto mt-5"> 
+    <% @messages.each do |message|%>
+        <div class="col-lg-4 p-2 border border-3 border-light rounded-end d-flex flex-column justify-content-evenly" style="background-color:#6C757D;">
+            <h2 class="text-center" style="color:white; opacity:90%;"><%= message.title%></h2>
+            <p class="ms-3 button-card"><%= link_to "View Message", message_path(message), class:"button-link"%></p>
+        </div>
+    <%end%>
+</div>
+
