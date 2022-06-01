@@ -22,7 +22,7 @@ bkz. [devise-gem](https://rubygems.org/gems/devise) <br/>
   
   <img
   src="./screenshots/2.png"
-  alt="Ana Sayfa"
+  alt="Mesaj 1"
   style="  display: block; margin-left: auto; margin-right: auto; width: 100%;">
   
   <br/>
@@ -30,7 +30,7 @@ bkz. [devise-gem](https://rubygems.org/gems/devise) <br/>
   
   <img
   src="./screenshots/3.png"
-  alt="Ana Sayfa"
+  alt="Mesaj 2"
   style="  display: block; margin-left: auto; margin-right: auto; width: 100%;">
   
   <br/>
@@ -38,7 +38,7 @@ bkz. [devise-gem](https://rubygems.org/gems/devise) <br/>
   
   <img
   src="./screenshots/4.png"
-  alt="Ana Sayfa"
+  alt="Sign Up"
   style="  display: block; margin-left: auto; margin-right: auto; width: 100%;">
   
   <br/>
@@ -46,5 +46,5 @@ bkz. [devise-gem](https://rubygems.org/gems/devise) <br/>
   
   <img
   src="./screenshots/5.png"
-  alt="Ana Sayfa"
+  alt="Log In"
   style="  display: block; margin-left: auto; margin-right: auto; width: 100%;">
